@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import "./CSS/App.css";
+import { Header } from "./components/Header";
+import { ClientPage } from "./Pages/ClientPage";
+import { LoginPage } from "./Pages/LoginPage";
+import { MyPage } from "./Pages/MyPage";
+import { AddItemPage } from "./Pages/AddItemPage";
+import {ClientDetailPage} from './Pages/ClientDetailPage'
+import { SignUpPage } from "./Pages/SignUpPage";
+import { CssBaseline, Typography } from "@mui/material";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <CssBaseline/>
+      <Typography sx={{ backgroundColor:"#7d80813d"}}>
+        <Header className="Header" />
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/items" element={<ClientPage />} />
+            <Route exact path="/" element={<LoginPage />} />
+            <Route exact path="/signin" element={<LoginPage />} />
+            <Route exact path="/additem" element={<AddItemPage />} />
+            <Route exact path="/clientdetail" element={<ClientDetailPage />} />
+            <Route exact path="/signup" element={<SignUpPage />} />
+            <Route exact path="/mypage" element={<MyPage />} />
+          </Routes>
+        </BrowserRouter>
+      </Typography>
+    </>
   );
 }
 

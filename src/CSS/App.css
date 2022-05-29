@@ -1,0 +1,78 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* .myPage */
+h2 a:hover {
+  color: steelblue;
+  transition: color 500ms ease;
+}
+
+/* client */
+
+
+.likeButton {
+  cursor: pointer !important;
+}
+
+.isRed {
+  color: red !important;
+}
+
+/* //drawerIcon */
+
+
+
+.itemList {
+  list-style-type: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.itemList:hover {
+  background-color: rgba(0, 0, 0, 0.151);
+  color: gray;
+  transition: color 500ms ease;
+}
+
+.itemTitle {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+/* /serach機能/ */
+.form-wrapper {
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
+  width: 40%;
+  min-width: 80px;
+}
+.form-wrapper input {
+  border: none;
+  background-color: #f5f8fa;
+  flex: 1;
+  outline: none;
+}
+
+.Grid {
+  cursor: default !important;
+}
